@@ -12,17 +12,19 @@ import ContactUs from './pages/ContactUs'
 import NewPost from './pages/NewPost'
 import DraftPost from './pages/DraftPost'
 import Leads from './pages/Leads'
+import Login from './pages/Login'
+import Register from './pages/Register'
 
 const App = () => {
   return <div className='bg-blue-900'>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Service />} >
+        <Route path='/service' element={<Service />} >
           <Route index element={<Stat />} />
           <Route path='webdev' element={<WebDev />} />
           <Route path='appdev' element={<AppDev />} />
           <Route path='cyber' element={<CyberSecurity />} />
-          <Route path='leads' element={<Leads/>} />
+          <Route path='leads' element={<Leads />} />
           <Route path='manager' element={<BlogManager />} />
           <Route path='newpost' element={<NewPost />} />
           <Route path='draftpost' element={<DraftPost />} />
@@ -30,9 +32,9 @@ const App = () => {
           <Route path='about' element={<AboutUs />} />
           <Route path='contact' element={<ContactUs />} />
           {/* <Route path='order' element={<Order />} /> */}
-          {/* <Route path='login' element={<Login />} /> */}
-          {/* <Route path='register' element={<Register />} /> */}
         </Route>
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
     </BrowserRouter>
   </div>
